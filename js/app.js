@@ -49,6 +49,15 @@ $input.addEventListener('keypress', function(e){
 				responseJSON = JSON.parse(searchXHR.responseText);
 				resultsArray = responseJSON.results;
 
+				//
+				if(responseJSON.results.length === 0) {
+					console.log($input.value + "not found");
+					var noResult = document.createElement('h1');
+					noResult.innerHTML = '<b>' + $input.value + '</b>' + " not found :(" + '<br>';
+					noResult.innerHTML += "You need to search with a valid movie title."
+					$resultContainer.appendChild(noResult);
+				}
+
 				for (var i = 0; i < resultsArray.length; i++) {
 					var tmdbPoster = resultsArray[i].poster_path;
 					var tmdbId = resultsArray[i].id;
@@ -57,11 +66,11 @@ $input.addEventListener('keypress', function(e){
 
 					//	setting default image is poster not available
 					if(tmdbPoster === null) {
-						tmdbPoster = "../img/noposter.png";
+						tmdbPoster = "'../img/noposter.png'";
 					} else {
 						tmdbPoster = imageBaseUrl + tmdbPoster;
 					}
-					
+
 					// rows for displaying search result
 					var resultRow = document.createElement("div");
 					resultRow.setAttribute('class', 'resultRow');

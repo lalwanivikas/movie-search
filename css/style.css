@@ -75,13 +75,12 @@ input{
 	margin: 2% auto 2%;
 	text-align: center;
 	width: 100%;
-	height: 1.8em;
+	height: 2.3em;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.8em;
 	font-weight: 300;
 	outline: none;
 	border: 1px solid #000;
-	padding: 30px;
 }
 
 input[type="text"]:focus {
@@ -104,6 +103,12 @@ input::-moz-placeholder {
     padding-top: 5px;
 }
 
+#resultContainer h1 {
+	font-size: 2.8em;
+	line-height: 1.5em;
+	color: orchid;
+}
+
 .resultRow {
 	background-color: #f8f8f8;
 	margin: 20px 0;
@@ -111,6 +116,7 @@ input::-moz-placeholder {
 }
 
 .poster {
+	background-image: url("../img/imdb_logo.png");
 	margin: 5px;
 	display: inline-block;
 	background: 5px;
