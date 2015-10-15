@@ -116,7 +116,6 @@ input::-moz-placeholder {
 }
 
 .poster {
-	background-image: url("../img/imdb_logo.png");
 	margin: 5px;
 	display: inline-block;
 	background: 5px;

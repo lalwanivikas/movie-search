@@ -66,7 +66,7 @@ $input.addEventListener('keypress', function(e){
 
 					//	setting default image is poster not available
 					if(tmdbPoster === null) {
-						tmdbPoster = "'../img/noposter.png'";
+						tmdbPoster = "img/noposter.png";
 					} else {
 						tmdbPoster = imageBaseUrl + tmdbPoster;
 					}
